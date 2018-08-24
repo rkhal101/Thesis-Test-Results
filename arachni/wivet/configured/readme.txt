@@ -1,0 +1,1 @@
+Same as default mode. Can't be configured further.
