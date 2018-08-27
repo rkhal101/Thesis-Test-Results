@@ -1,0 +1,13 @@
+HTTP/1.1 200 Partial Content
+Date: Thu, 02 Aug 2018 01:01:18 GMT
+Server: Apache/2.4.10 (Debian) PHP/5.6.11
+Last-Modified: Thu, 23 Jul 2015 19:18:04 GMT
+ETag: "59f-51b8fbf1a5300"
+Accept-Ranges: bytes
+Content-Length: 1439
+Content-Range: bytes 0-1438/1439
+Keep-Alive: timeout=5, max=22
+Connection: Keep-Alive
+Content-Type: application/x-shockwave-flash
+
+CWS	’

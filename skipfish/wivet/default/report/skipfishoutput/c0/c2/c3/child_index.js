@@ -1,0 +1,5 @@
+var child = [
+  { 'dupe': false, 'type': 8, 'name': 'connection-min.js', 'dir': 'c0', 'linked': 2, 'url': 'http://127.0.0.1:8090/js/yahoo/connection-min.js', 'fetched': true, 'code': 200, 'len': 11826, 'decl_mime': 'application/javascript', 'sniff_mime': 'application/javascript', 'cset': '[none]', 'missing': false, 'csens': false, 'child_cnt': 0, 'issue_cnt': [ 1, 0, 0, 0, 0 ], 'sig': 0xfff6d5cd },
+  { 'dupe': false, 'type': 8, 'name': 'event-min.js', 'dir': 'c1', 'linked': 2, 'url': 'http://127.0.0.1:8090/js/yahoo/event-min.js', 'fetched': true, 'code': 200, 'len': 14290, 'decl_mime': 'application/javascript', 'sniff_mime': 'application/javascript', 'cset': '[none]', 'missing': false, 'csens': false, 'child_cnt': 0, 'issue_cnt': [ 1, 0, 0, 0, 0 ], 'sig': 0xfff6d5cd },
+  { 'dupe': false, 'type': 8, 'name': 'yahoo-min.js', 'dir': 'c2', 'linked': 2, 'url': 'http://127.0.0.1:8090/js/yahoo/yahoo-min.js', 'fetched': true, 'code': 200, 'len': 5848, 'decl_mime': 'application/javascript', 'sniff_mime': 'application/javascript', 'cset': '[none]', 'missing': false, 'csens': false, 'child_cnt': 0, 'issue_cnt': [ 1, 0, 0, 0, 0 ], 'sig': 0xfff6d5cd }
+];

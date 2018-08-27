@@ -1,0 +1,51 @@
+HTTP/1.1 200 Partial Content
+Date: Thu, 02 Aug 2018 01:02:13 GMT
+Server: Apache/2.4.10 (Debian) PHP/5.6.11
+X-Powered-By: PHP/5.6.11
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Range: bytes 0-464/465
+Content-Length: 465
+Keep-Alive: timeout=5, max=41
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+		<link type="text/css" rel="stylesheet" href="/style.css" />
+	</head>
+	<body  class="body">
+    <center>
+      <form method="POST" name="aform" action="3_45589.php">
+        <table>
+          <tr>
+            <td>Name:<td>
+            <td><input id="name" name="name" type="text" size="20"/><td>
+          <tr>
+          <tr>
+            <td>Surname:<td>
+            <td><input id="surname" name="surname" type="text" size="20"/><td>
+          <tr>
+          <tr>
+            <td>Email:<td>
+            <td><input id="email" name="email" type="text" size="20"/><td>
+          <tr>
+          <tr>
+            <td style="text-align:center">
+              <input class="button" type="submit" value="FINISH"/>
+            <td>
+          <tr>
+        </table>
+      </form>
+      <a href="3_2cc42.php">go back</a>
+      <br/>
+      <a href="3_6ff22.php">main page :)</a>
+    </center>
+
+	</body>
+</html>

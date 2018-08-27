@@ -1,0 +1,40 @@
+HTTP/1.1 200 Partial Content
+Date: Thu, 02 Aug 2018 01:01:46 GMT
+Server: Apache/2.4.10 (Debian) PHP/5.6.11
+X-Powered-By: PHP/5.6.11
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Range: bytes 0-379/380
+Content-Length: 380
+Keep-Alive: timeout=5, max=17
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+		<link type="text/css" rel="stylesheet" href="/style.css" />
+  <script>
+    window.onload = function(){
+      with(document){
+        var dframe = createElement("frame");
+        dframe.src = "../innerpages/12_2a2cf.php";
+        body.appendChild(dframe);
+
+        var diframe = createElement("iframe");
+        diframe.src = "../innerpages/12_3a2cf.php";
+        body.appendChild(diframe);
+      }
+    }
+  </script>
+	</head>
+	<body  class="body">
+    <iframe src="../innerpages/12_1a2cf.php"></iframe>
+
+	</body>
+</html>
+

@@ -1,0 +1,55 @@
+HTTP/1.1 200 Partial Content
+Date: Thu, 02 Aug 2018 01:02:55 GMT
+Server: Apache/2.4.10 (Debian) PHP/5.6.11
+X-Powered-By: PHP/5.6.11
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Range: bytes 0-654/655
+Content-Length: 655
+Keep-Alive: timeout=5, max=80
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+		<link type="text/css" rel="stylesheet" href="/style.css" />
+  <script>
+    function searchMe(){
+      alert("alert teaser");
+      var searchcontainer = document.getElementById("searchcontainer");
+      var enginesel = document.getElementById("engine");
+      searchcontainer.src = enginesel.options[enginesel.selectedIndex].value;
+    }
+  </script>  
+	</head>
+	<body  class="body">
+    <center>
+      <form method="POST" name="systemform">
+        <table>
+          <tr>
+            <td>Input:<td>
+            <td><input id="term" name="term" type="text" size="20"/><td>
+          <tr>
+          <tr>
+            <td>Select One:<td>
+            <td>
+              <select name="engine" id="engine" onchange="searchMe();">
+                <option value ="http://www.google.com">google</option>
+                <option value ="http://www.live.com">live</option>
+                <option value ="http://www.yahoo.com">yahoo</option>
+                <option value ="http://[127.0.0.1:8090, --&gt;&quot;&gt;'&gt;'&quot;&lt;sfi000493v310903&gt;]/innerpages/6_14b3c.php">ours</option>
+              </select>
+            <td>
+          <tr>
+        </table>
+      </form>
+      <iframe id="searchcontainer" width="600px" height="300px"/>
+    <center>
+
+	</body>
+</html>

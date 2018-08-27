@@ -1,0 +1,26 @@
+HTTP/1.1 200 Partial Content
+Date: Thu, 02 Aug 2018 01:02:09 GMT
+Server: Apache/2.4.10 (Debian) PHP/5.6.11
+X-Powered-By: PHP/5.6.11
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Range: bytes 0-290/291
+Content-Length: 291
+Keep-Alive: timeout=5, max=94
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+		<link type="text/css" rel="stylesheet" href="/style.css" />
+	</head>
+	<body  class="body">
+		You have reached Test Case 13_10ad3 for the 2nd time!<br/>
+<a href='../innerpages/13_25af3.php'>click me</a>
+	</body>
+</html>
