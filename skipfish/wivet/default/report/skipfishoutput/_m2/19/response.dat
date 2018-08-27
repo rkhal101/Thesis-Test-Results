@@ -1,0 +1,126 @@
+HTTP/1.1 200 Partial Content
+Date: Thu, 02 Aug 2018 01:01:46 GMT
+Server: Apache/2.4.10 (Debian) PHP/5.6.11
+X-Powered-By: PHP/5.6.11
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Range: bytes 0-890/891
+Content-Length: 891
+Keep-Alive: timeout=5, max=41
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+		<link type="text/css" rel="stylesheet" href="/style.css" />
+	<script>
+		function go1(){
+			window.location = "../innerpages/9_1a1b2.php";
+		}
+		function go2(){
+			window.location.href = "../innerpages/9_2ff21.php";
+		}
+		function go3(){
+			document.location.href = "../innerpages/9_3a2b7.php";
+		}
+		function go4(){
+			document.location = "../innerpages/9_4b82d.php";
+		}
+		function genericGo(i){
+			var linknames = new Array();
+			linknames[0] = "9_0ee31";
+			linknames[1] = "9_1ee31";
+			linknames[2] = "9_2ee31";
+			linknames[3] = "9_3ee31";
+			linknames[4] = "9_4ee31";
+			linknames[5] = "9_5ee31";
+			linknames[6] = "9_6ee31";
+			linknames[7] = "9_7ee31";
+			linknames[8] = "9_8ee31";
+			linknames[9] = "9_9ee31";
+			linknames[10] = "9_10ee31";
+			linknames[11] = "9_11ee31";
+			linknames[12] = "9_12ee31";
+			linknames[13] = "9_13ee31";
+			linknames[14] = "9_14ee31";
+			linknames[15] = "9_15ee31";
+			linknames[16] = "9_16ee31";
+			linknames[17] = "9_17ee31";
+			linknames[18] = "9_18ee31";
+			linknames[19] = "9_19ee31";
+			linknames[20] = "9_20ee31";
+			linknames[21] = "9_21ee31";
+			linknames[22] = "9_22ee31";
+			linknames[23] = "9_23ee31";
+			linknames[24] = "9_24ee31";
+			linknames[25] = "9_25ee31";
+			linknames[26] = "9_26ee31";
+			linknames[27] = "9_27ee31";
+			linknames[28] = "9_28ee31";
+			linknames[29] = "9_29ee31";
+			window.location.href = "../innerpages/" + linknames[i] + ".php";
+		}
+		function go5(){
+			document.location = "../innerpages/9_26dd2e.php";
+		}
+	</script>
+	</head>
+	<body  class="body">
+		<!-- span -->
+		<span onclick="go1()">click here </span> 
+		<span onmouseout="go2()">click here </span>
+		<span onmousedown="go3()">click here </span>
+		<span onmouseup="go4()">click here </span>
+		<!-- p -->
+		<p onclick="genericGo(5)">click here </p> 
+		<p onmouseout="genericGo(6)">click here </p>
+		<p onmousedown="genericGo(7)">click here </p>
+		<p onmouseup="genericGo(8)">click here </p>
+		<br/>
+		<!-- div -->
+		<div onclick="genericGo(9)">click here</div>
+		<div onmouseout="genericGo(10)">click here</div>
+		<div onmousedown="genericGo(11)">click here</div>
+		<div onmouseup="genericGo(12)">click here</div>
+		<br/>
+		<!-- tr and td -->
+		<table>
+			<tr>
+				<td onclick="genericGo(13)">click here</td>
+				<td onmouseout="genericGo(14)">click here</td>
+				<td onmousedown="genericGo(15)">click here</td>
+				<td onmouseup="genericGo(16)">click here</td>
+			</tr>
+			<tr onclick="genericGo(17)">
+				<td>click here</td>
+			</tr>
+			<tr onmouseout="genericGo(18)">
+				<td>click here</td>
+			</tr>
+			<tr onmousedown="genericGo(19)">
+				<td>click here</td>
+			</tr>
+			<tr onmouseup="genericGo(20)">
+				<td>click here</td>
+			</tr>
+		</table>
+		<br/>
+		<!-- ol -->
+		<ol>
+			<li onclick="genericGo(21)">click here</li>			
+			<li onmouseout="genericGo(22)">click here</li>
+			<li onmousedown="genericGo(23)">click here</li>
+			<li onmouseup="genericGo(24)">click here</li>
+		</ol>
+		<!-- radio buttons -->
+		<input onclick="genericGo(25)"type=radio name="myradio" value="1"/>select this 1<br/>
+		<input type=radio name="myradio" value="2"/>select this 2<br/>
+		<input type=radio name="myradio" value="3"/>select this 3
+
+	</body>
+</html>

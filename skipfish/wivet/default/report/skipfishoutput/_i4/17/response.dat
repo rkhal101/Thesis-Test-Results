@@ -1,0 +1,22 @@
+HTTP/1.1 302 Found
+Date: Thu, 02 Aug 2018 01:01:18 GMT
+Server: Apache/2.4.10 (Debian) PHP/5.6.11
+X-Powered-By: PHP/5.6.11
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Location: ../innerpages/16_1b14f.php
+Content-Length: 353
+Keep-Alive: timeout=5, max=16
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+16_1b14f16_2f41a<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+		<link type="text/css" rel="stylesheet" href="/style.css" />
+	</head>
+	<body  class="body">
+This page has moved to <a href="../innerpages/16_2f41a.php">HERE :)</a>	</body>
+</html>
