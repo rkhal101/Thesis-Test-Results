@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 665
+Date: Tue, 07 Aug 2018 19:12:00 GMT
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 1 - Injection into string values in a login page with different valid responses</title>
+</head>
+<body>
+
+
+	Login Page:<br><br>
+	<form name="frmInput" id="frmInput" action="Case01-InjectionInLogin-String-LoginBypass-WithDifferent200Responses.jsp" method="POST">
+		<input type="text" name="username" id="username"><br>
+		<input type="password" name="password" id="password"><br>
+		<input type=submit value="submit">
+	</form>
+
+
+</body>
+</html>

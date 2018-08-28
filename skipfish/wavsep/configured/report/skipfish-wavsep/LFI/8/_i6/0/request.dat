@@ -1,0 +1,10 @@
+GET /wavsep/active/LFI/sfi9876/files/ HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Accept: skip/fish;
+Cookie: JSESSIONID=545BB8CA10B5AD9A0E84C88D4860E8B6
+

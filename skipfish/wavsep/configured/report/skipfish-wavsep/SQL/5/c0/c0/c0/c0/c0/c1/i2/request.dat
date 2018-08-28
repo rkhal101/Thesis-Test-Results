@@ -1,0 +1,9 @@
+GET /wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-500Error/text%2Fhtml%3Bcharset%3DISO-8859-1.jsp/ HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=C96A7CC47BC20E24C520F5B05538B2F5
+

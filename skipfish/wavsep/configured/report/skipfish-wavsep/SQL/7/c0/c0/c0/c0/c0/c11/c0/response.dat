@@ -1,0 +1,60 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 19:16:41 GMT
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 12 - Injection into a date value in a search page with different valid responses</title>
+</head>
+<body>
+
+The list of transactions:
+<TABLE>
+<TR>
+<TD>
+<B>
+transactionId
+</B>
+</TD>
+<TD>
+<B>
+sum
+</B>
+</TD>
+<TD>
+<B>
+description
+</B>
+</TD>
+<TD>
+<B>
+transactionDate
+</B>
+</TD>
+</TR>
+<TR>
+<TD>
+132
+</TD>
+<TD>
+1000
+</TD>
+<TD>
+empty
+</TD>
+<TD>
+2010-01-01
+</TD>
+</TR>
+</TABLE>
+
+
+</body>
+</html>

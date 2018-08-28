@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 578
+Date: Tue, 07 Aug 2018 18:44:15 GMT
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 12 - RXSS via Javascript injection into the scope of an HTML/Javascript Event (Any Delimiter)</title>
+</head>
+<body>
+
+
+	Enter your input:<br><br>
+	<form name="frmInput" id="frmInput" action="Case12-Js2JsEventScope.jsp" method="POST"

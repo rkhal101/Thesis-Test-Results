@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 302 Found\x0aServer: Apache-Coyote/1.1\x0aLocation: skipfish://invalid/;?\x0aContent-Type: text/html;charset=ISO-8859-1\x0aContent-Length: 0\x0aDate: Tue, 07 Aug 2018 20:04:00 GMT\x0a'}

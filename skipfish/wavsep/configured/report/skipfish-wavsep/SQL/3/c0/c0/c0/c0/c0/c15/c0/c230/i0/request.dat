@@ -1,0 +1,9 @@
+GET /wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Valid/Case16-InjectionInView-NumericWithoutQuotes-PermissionBypass-WithDifferent200Responses.jsp?transactionId=description HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=195306443CED546278A5B39DFA5CE4D6
+

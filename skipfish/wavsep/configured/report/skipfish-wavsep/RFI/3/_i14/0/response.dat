@@ -1,0 +1,5 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: JSESSIONID=EA9F3C46B4D85E9E7BB154BF5D353333; Path=/wavsep/; HttpOnly
+
+[...truncated...]

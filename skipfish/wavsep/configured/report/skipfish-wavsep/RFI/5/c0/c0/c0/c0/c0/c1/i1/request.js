@@ -1,0 +1,1 @@
+var req = {'data':'GET /wavsep/active/RFI/RFI-Detection-Evaluation-GET-200Valid/dddd%2F1.1%20200%20OK.ini/ HTTP/1.1\x0d\x0aHost: localhost:8090\x0d\x0aAccept-Encoding: gzip\x0d\x0aConnection: keep-alive\x0d\x0aUser-Agent: Mozilla/5.0 SF/2.10b\x0d\x0aRange: bytes=0-399999\x0d\x0aReferer: http://localhost/\x0d\x0aCookie: JSESSIONID=78C0C17E5DD86885F1AF007940225A95\x0d\x0a\x0d\x0a'}

@@ -1,0 +1,13 @@
+POST /wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-POST-200Error/Case12-InjectionInSearch-Date-UnionExploit-With200Errors.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+Range: bytes=0-399999
+User-Agent: sfish'"
+Referer: sfish'"
+Accept-Language: sfish'",en
+Cookie: JSESSIONID=017322FAEA483A4BB5C7663D7C520BAE
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 28
+
+transactionDate=2010-01-01'"

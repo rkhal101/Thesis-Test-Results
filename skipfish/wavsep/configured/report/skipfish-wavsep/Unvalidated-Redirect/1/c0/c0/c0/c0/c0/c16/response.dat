@@ -1,0 +1,673 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 19:58:24 GMT
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Evaluation of Unvalidated Redirect Detection Accuracy - HTTP GET Method</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<B>File delimiter: </B>/<BR>
+<B>Line delimiter (encoded): </B>&#38;&#35;10&#59;<BR>
+<B>User Directory Path (Absolute): </B>/<BR>
+<B>Deployment Path Root (Absolute): </B>/root/apache-tomcat-8.0.27/webapps/wavsep/<BR>
+<B>Deployment Path Current File (Absolute): </B>/root/apache-tomcat-8.0.27/webapps/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/index.jsp<BR>
+<B>Deployment Path Current Directory (Absolute): </B>/root/apache-tomcat-8.0.27/webapps/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/index.jsp<BR>
+<B>Web Path Root (Relative): </B>/wavsep<BR>
+<B>Web Path of File (Relative-no-root): </B>/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/index.jsp<BR>
+<B>Web Path of Dir (Relative-no-root): </B>/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/index.jsp<BR>
+<B>request URL: </B>http://localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/index.jsp<BR>
+<B>Current directory's canonical path: </B>/<BR>
+<B>Current directory's absolute  path: </B>/.<BR>
+<BR><BR>
+
+
+
+
+<center><font size="5">Unvalidated Redirect Test Cases - GET - HTTP 302 Redirect Responses:</font></center><br><br>
+
+  <B><a href="Case01-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultFullInput-AnyPathReq-Read.jsp?target=http://localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/content.ini">
+   Case01-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultFullInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an unrestricted HTTP URL, default full path input, without path requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>None</TD><TD>Full Path Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  http://[external-domain]:[port]/[path]/[file].[extension] (success)<br><b> or </b>
+  https://[external-domain]:[port]/[path]/[file].[extension] (success)<br><b> vs. </b>
+  [invalid URL/filename] (custom failure/404)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: http://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> http://www.google.com <br>
+  <B>Independent Exploit 2:</B> https://www.google.com
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  <B><a href="Case02-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultRelativeInput-AnyPathReq-Read.jsp?target=content.ini">
+   Case02-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultRelativeInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an unrestricted HTTP URL, default relative path input, without path requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>None</TD><TD>Relative Path Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  http://[external-domain]:[port]/[path]/[file].[extension] (success)<br><b> or </b>
+  https://[external-domain]:[port]/[path]/[file].[extension] (success)<br><b> vs. </b>
+  [invalid URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: http://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> http://www.google.com <br>
+  <B>Independent Exploit 2:</B> https://www.google.com
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case03-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultInvalidInput-AnyPathReq-Read.jsp?target=httk://google.com">
+   Case03-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultInvalidInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an unrestricted HTTP URL, default invalid path input, without path requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect</TD><TD>None</TD><TD><B>Invalid</B> Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Relative path/ None)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  http://[external-domain]:[port]/[path]/[file].[extension] (success)<br><b> or </b>
+  https://[external-domain]:[port]/[path]/[file].[extension] (success)<br><b> vs. </b>
+  [invalid URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: http://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> http://www.google.com <br>
+  <B>Independent Exploit 1:</B> https://www.google.com
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case04-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultEmptyInput-AnyPathReq-Read.jsp?target=">
+   Case04-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultEmptyInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an unrestricted HTTP URL, default empty path input, without path requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect</TD><TD>None</TD><TD><B>Empty</B> Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Relative path/ None)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  http://[external-domain]:[port]/[path]/[file].[extension] (success)<br><b> or </b>
+  https://[external-domain]:[port]/[path]/[file].[extension] (success)<br><b> vs. </b>
+  [invalid URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: http://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> http://www.google.com <br>
+  <B>Independent Exploit 1:</B> https://www.google.com
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case05-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultPartialInput-PartialPathReq-Read.jsp?target=localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/content.ini">
+   Case05-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultPartialInput-PartialPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an unrestricted HTTP URL, default partial path input, with protocol-less path requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>None</TD><TD>Partial Path Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> None<BR><B>Full Path:</B> Not Supported</TD><TD>Path Without Protocol<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  [external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  [invalid URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: http://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case06-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultInvalidInput-PartialPathReq-Read.jsp?target=http://localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/none892j3kd.txt">
+   Case06-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultInvalidInput-PartialPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an unrestricted HTTP URL, default invalid path input, with protocol-less path requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>None</TD><TD><b>Invalid</b> Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> None<BR><B>Full Path:</B> Not Supported</TD><TD>Path Without Protocol<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  [external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  [invalid URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: http://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case07-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultEmptyInput-PartialPathReq-Read.jsp?target=">
+   Case07-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultEmptyInput-PartialPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an unrestricted HTTP URL, default empty input, with protocol-less path requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>None</TD><TD><b>Empty Input</b></TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> None<BR><B>Full Path:</B> Not Supported</TD><TD>Path Without Protocol<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  [external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  [invalid URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: http://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case08-Redirect-RedirectMethod-FilenameContext-HttpInputValidation-HttpURL-DefaultPartialInput-PartialPathReq-Read.jsp?target=localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/content.ini">
+   Case08-Redirect-RedirectMethod-FilenameContext-HttpInputValidation-HttpURL-DefaultPartialInput-PartialPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an HTTP URL with flawed http text validation, default partial path input, with protocol-less path requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>HTTP Input<br>Validation</TD><TD>Partial Path Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> None<BR><B>Full Path:</B> Not Supported</TD><TD>Path Without Protocol<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  [external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  [invalid URL/filename] (failure) and http://[URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: [external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case09-Redirect-RedirectMethod-FilenameContext-HttpInputValidation-HttpURL-DefaultRelativeInput-AnyPathReq-Read.jsp?target=content.ini">
+   Case09-Redirect-RedirectMethod-FilenameContext-HttpInputValidation-HttpURL-DefaultRelativeInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an HTTP URL with flawed http text validation, default relative path input, with any prefix requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>HTTP Input<br>Validation</TD><TD>Relative Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  hTTp://[external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  http://[URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: hTTp://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> hTTp://www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case10-Redirect-RedirectMethod-FilenameContext-HttpInputValidation-HttpURL-DefaultInvalidInput-AnyPathReq-Read.jsp?target=http://localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/none892j3kd.txt">
+   Case10-Redirect-RedirectMethod-FilenameContext-HttpInputValidation-HttpURL-DefaultInvalidInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an HTTP URL with flawed http text validation, default invalid path input, with any prefix requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>HTTP Input<br>Validation</TD><TD>Invalid Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  hTTp://[external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  http://[URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: hTTp://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> hTTp://www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case11-Redirect-RedirectMethod-FilenameContext-HttpInputValidation-HttpURL-DefaultEmptyInput-AnyPathReq-Read.jsp?target=">
+   Case11-Redirect-RedirectMethod-FilenameContext-HttpInputValidation-HttpURL-DefaultEmptyInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an HTTP URL with flawed http text validation, default empty input, with any prefix requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>HTTP Input<br>Validation</TD><TD>Empty Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  hTTp://[external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  http://[URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: hTTp://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> hTTp://www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case12-Redirect-RedirectMethod-FilenameContext-HttpInputRemoval-HttpURL-DefaultPartialInput-PartialPathReq-Read.jsp?target=localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/content.ini">
+   Case12-Redirect-RedirectMethod-FilenameContext-HttpInputRemoval-HttpURL-DefaultPartialInput-PartialPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an HTTP URL with flawed http text removal, default partial path input, with protocol-less path requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>HTTP Input<br>Removal</TD><TD>Partial Path Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> None<BR><B>Full Path:</B> Not Supported</TD><TD>Path Without Protocol<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  [external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  [invalid URL/filename] (failure) and http://[URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: [external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case13-Redirect-RedirectMethod-FilenameContext-HttpInputRemoval-HttpURL-DefaultRelativeInput-AnyPathReq-Read.jsp?target=content.ini">
+   Case13-Redirect-RedirectMethod-FilenameContext-HttpInputRemoval-HttpURL-DefaultRelativeInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an HTTP URL with flawed http text removal, default relative path input, with any prefix requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>HTTP Input<br>Removal</TD><TD>Relative Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  hTTp://[external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  http://[URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: hTTp://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> hTTp://www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case14-Redirect-RedirectMethod-FilenameContext-HttpInputRemoval-HttpURL-DefaultInvalidInput-AnyPathReq-Read.jsp?target=http://localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/none892j3kd.txt">
+   Case14-Redirect-RedirectMethod-FilenameContext-HttpInputRemoval-HttpURL-DefaultInvalidInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an HTTP URL with flawed http text removal, default invalid path input, with any prefix requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>HTTP Input<br>Removal</TD><TD>Invalid Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  hTTp://[external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  http://[URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: hTTp://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> hTTp://www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case15-Redirect-RedirectMethod-FilenameContext-HttpInputRemoval-HttpURL-DefaultEmptyInput-AnyPathReq-Read.jsp?target=">
+   Case15-Redirect-RedirectMethod-FilenameContext-HttpInputRemoval-HttpURL-DefaultEmptyInput-AnyPathReq-Read.jsp</a></B><br>
+  Unvalidated Redirect attack: injection into a filename/url context, using an HTTP URL with flawed http text removal, default empty input, with any prefix requirements.<br>
+  
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Initial Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Redirect </TD><TD>HTTP Input<br>Removal</TD><TD>Empty Input</TD>
+  <TD>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path / Relative Path / None / Partial Path)</TD>
+  <TD>Text/Html</TD><TD>302 Redirect</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  hTTp://[external-domain]:[port]/[path]/[file].[extension] (success)<br> vs. </b>
+  http://[URL/filename] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: hTTp://[external-domain]:[port]/[path to malicious XSS/Phishing/CSRF/Clickjacking file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>Independent Exploit 1:</B> hTTp://www.google.com <br>
+  </TD></TR>
+  </TABLE>  
+  <br>  
+
+</body>
+</html>

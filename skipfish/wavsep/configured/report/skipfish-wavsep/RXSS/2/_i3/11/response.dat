@@ -1,0 +1,25 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 18:44:10 GMT
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 21 - RXSS via VBScript injection into the scope of VBScript code within a property (Single Quote String Delimiter)</title>
+</head>
+
+
+
+<frameset cols="25%,75%">
+<frame name="frame1" id="frame1" src="dummy.html">
+<frame name='frame2' id='frame2' src='VBScript: 
+Document.Write ("Welcome Mr. " & skipfish--&gt;&quot;&gt;&#39;&gt;&#39;&quot;&lt;sfi000229v011919&gt;)
+'> 
+
+</frameset>
+</html>

@@ -1,0 +1,59 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 19:47:20 GMT
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Remote File Inclusion Test Case</title>
+</head>
+<body>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<B>File delimiter: </B>/<BR>
+<B>Line delimiter (encoded): </B>&#38;&#35;10&#59;<BR>
+<B>User Directory Path (Absolute): </B>/<BR>
+<B>Deployment Path Root (Absolute): </B>/root/apache-tomcat-8.0.27/webapps/wavsep/<BR>
+<B>Deployment Path Current File (Absolute): </B>/root/apache-tomcat-8.0.27/webapps/wavsep/active/RFI/RFI-Detection-Evaluation-POST-200Error/Case07-RFI-UrlClass-FilenameContext-Unrestricted-HttpURL-DefaultEmptyInput-NoProtocolReq-Read.jsp<BR>
+<B>Deployment Path Current Directory (Absolute): </B>/root/apache-tomcat-8.0.27/webapps/wavsep/active/RFI/RFI-Detection-Evaluation-POST-200Error<BR>
+<B>Web Path Root (Relative): </B>/wavsep<BR>
+<B>Web Path of File (Relative-no-root): </B>/active/RFI/RFI-Detection-Evaluation-POST-200Error/Case07-RFI-UrlClass-FilenameContext-Unrestricted-HttpURL-DefaultEmptyInput-NoProtocolReq-Read.jsp<BR>
+<B>Web Path of Dir (Relative-no-root): </B>/active/RFI/RFI-Detection-Evaluation-POST-200Error<BR>
+<B>request URL: </B>http://localhost:8090/wavsep/active/RFI/RFI-Detection-Evaluation-POST-200Error/Case07-RFI-UrlClass-FilenameContext-Unrestricted-HttpURL-DefaultEmptyInput-NoProtocolReq-Read.jsp<BR>
+<B>Current directory's canonical path: </B>/<BR>
+<B>Current directory's absolute  path: </B>/.<BR>
+<BR><BR>
+
+
+	
+	
+	
+
+
+
+	
+	
+	Exception details: java.net.UnknownHostException: .htaccess.aspx-->">'>'"<sfi000051v015861>
+
+
+</body>
+</html>zç

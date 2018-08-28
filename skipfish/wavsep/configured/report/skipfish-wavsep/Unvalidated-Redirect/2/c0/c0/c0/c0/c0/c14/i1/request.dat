@@ -1,0 +1,9 @@
+GET /wavsep/active/Unvalidated-Redirect/Redirect-JavaScript-Detection-Evaluation-GET-200Valid/Case10-Redirect-RedirectMethod-FilenameContext-HttpInputValidation-HttpURL-DefaultInvalidInput-AnyPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=0AAED877AD8791A36A51521976054850
+

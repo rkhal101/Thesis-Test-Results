@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 200 OK\x0aServer: Apache-Coyote/1.1\x0aSet-Cookie: JSESSIONID=EC796A0E83FCEE3332F8298014A961A8; Path=/wavsep/; HttpOnly\x0a\x0a[...truncated...]\x0a'}

@@ -1,0 +1,9 @@
+GET /wavsep/active/Reflected-XSS/RXSS-Detection-Evaluation-GET-Experimental/Case02-Tag2HtmlPageScope-SecretVectorPOST.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=11F69EE90B0B36EB810DC646888365B1
+

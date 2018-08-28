@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 19:09:37 GMT
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 6 - Injection into a numeric value in a private resource view page with erroneous responses</title>
+</head>
+<body>
+
+The list of transactions:
+<TABLE>
+<TR>
+<TD>
+<B>
+transactionId
+</B>
+</TD>
+<TD>
+<B>
+sum
+</B>
+</TD>
+<TD>
+<B>
+description
+</B>
+</TD>
+<TD>
+<B>
+transactionDate
+</B>
+</TD>
+</TR>
+</TABLE>
+
+
+</body>
+</html>ith erroneous !

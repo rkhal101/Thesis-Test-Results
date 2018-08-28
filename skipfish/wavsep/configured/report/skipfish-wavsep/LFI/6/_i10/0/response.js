@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 200 Partial Content\x0aServer: Apache-Coyote/1.1\x0aAccept-Ranges: bytes\x0aETag: W/\x225-1333664860000\x22\x0aLast-Modified: Thu, 05 Apr 2012 22:27:40 GMT\x0aContent-Range: bytes 0-4/5\x0aContent-Type: text/plain\x0aContent-Length: 5\x0aDate: Tue, 07 Aug 2018 20:49:20 GMT\x0a\x0a12345/\xba'}

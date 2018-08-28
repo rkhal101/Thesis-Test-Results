@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 200 OK\x0aServer: Apache-Coyote/1.1\x0aServer-Info: abcd\x0aSet-Cookie: parameter=abcd; Expires=Thu, 01-Jan-1970 00:00:10 GMT\x0a\x0a[...truncated...]\x0a'}

@@ -1,0 +1,3 @@
+var child = [
+  { 'dupe': false, 'type': 128, 'name': 'SInjection-Detection-Evaluation-GET-200Error-Experimental', 'dir': 'c0', 'linked': 0, 'url': 'http://localhost:8090/wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Error-Experimental/Case01-InjectionInInsertValues-String-BinaryDeliberateRuntimeError-With200Errors.jsp?msg=SInjection-Detection-Evaluation-GET-200Error-Experimental&target=a@a.com', 'fetched': true, 'code': 200, 'len': 693, 'decl_mime': 'text/html', 'sniff_mime': 'application/xhtml+xml', 'cset': 'ISO-8859-1', 'missing': false, 'csens': false, 'child_cnt': 0, 'issue_cnt': [ 0, 0, 0, 0, 0 ], 'sig': 0xff7fffff }
+];

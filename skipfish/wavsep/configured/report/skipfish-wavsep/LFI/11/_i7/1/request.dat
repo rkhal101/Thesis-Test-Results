@@ -1,0 +1,9 @@
+GET /wavsep/active/LFI/LFI-Detection-Evaluation-POST-200Valid/Case10-LFI-FileClass-FilenameContext-Unrestricted-FileDirective-DefaultFullInput-NoPathReq-Read.jsp/`echo%24{IFS}skip12``echo%24{IFS}34fish` HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=62B7A49CE18D2A553CFDB7EE8D335444
+

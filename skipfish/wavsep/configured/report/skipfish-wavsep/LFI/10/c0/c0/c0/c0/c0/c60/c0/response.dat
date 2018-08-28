@@ -1,0 +1,7 @@
+HTTP/1.1 302 Found
+Server: Apache-Coyote/1.1
+Location: http://localhost:8090/wavsep/active/LFI/LFI-Detection-Evaluation-POST-302Redirect/MissingResource.html
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 0
+Date: Tue, 07 Aug 2018 21:13:42 GMT
+

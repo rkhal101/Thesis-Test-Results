@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 200 OK\x0aServer: Apache-Coyote/1.1\x0aSet-Cookie: info-cookie-no-http-only=test\x0a\x0a[...truncated...]\x0a'}

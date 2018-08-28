@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 302 Found\x0aServer: Apache-Coyote/1.1\x0aLocation: http://localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/content.ini\x0aContent-Type: text/html;charset=ISO-8859-1\x0aContent-Length: 0\x0aDate: Tue, 07 Aug 2018 19:58:40 GMT\x0aConnection: close\x0a\x0a'}

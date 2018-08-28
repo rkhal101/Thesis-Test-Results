@@ -1,0 +1,12 @@
+POST /wavsep/active/RFI/RFI-Detection-Evaluation-GET-200Valid/Case03-RFI-UrlClass-FilenameContext-Unrestricted-HttpURL-DefaultInvalidInput-AnyPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=78C0C17E5DD86885F1AF007940225A95
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 100
+
+target=http://localhost:8090/wavsep/active/RFI/RFI-Detection-Evaluation-GET-200Valid/none892j3kd.txt

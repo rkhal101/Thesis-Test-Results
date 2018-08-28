@@ -1,0 +1,11 @@
+HTTP/1.1 200 Partial Content
+Server: Apache-Coyote/1.1
+Accept-Ranges: bytes
+ETag: W/"5-1333664860000"
+Last-Modified: Thu, 05 Apr 2012 22:27:40 GMT
+Content-Range: bytes 0-4/5
+Content-Type: text/plain
+Content-Length: 5
+Date: Tue, 07 Aug 2018 20:49:20 GMT
+
+12345/º

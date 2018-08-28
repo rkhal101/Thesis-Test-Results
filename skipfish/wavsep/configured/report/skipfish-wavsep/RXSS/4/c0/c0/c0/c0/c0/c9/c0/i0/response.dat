@@ -1,0 +1,26 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 18:55:48 GMT
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Scriptless Injection in HTML Script Tag Src Attribute scope of the HTML page.</title>
+</head>
+<body>
+<!--
+	Contributed by the IronWASP project (http://ironwasp.org/).
+	Original Author: Lavakumar Kuppan (lava@ironwasp.org).
+-->
+
+<script src="//skipfish.invalid/;?"/>
+
+
+</body>
+</html>y>
+</html>

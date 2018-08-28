@@ -1,0 +1,3 @@
+var child = [
+  { 'dupe': false, 'type': 4, 'name': 'wavsep', 'dir': 'c0', 'linked': 5, 'url': 'http://localhost:8090/wavsep/', 'fetched': true, 'code': 200, 'len': 1504, 'decl_mime': 'text/html', 'sniff_mime': 'application/xhtml+xml', 'cset': 'ISO-8859-1', 'missing': false, 'csens': false, 'child_cnt': 20, 'issue_cnt': [ 8, 3, 13, 8, 0 ], 'sig': 0x296681b4 }
+];

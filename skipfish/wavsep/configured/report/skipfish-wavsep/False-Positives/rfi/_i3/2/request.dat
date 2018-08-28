@@ -1,0 +1,12 @@
+POST /wavsep/active/RFI/RFI-FalsePositives-GET/Case03-RFI-FalsePositive-UrlClass-TextHtmlValidResponse-FilenameContext-WhiteList-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=64F9CE6C1591F690C398D94404679180
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 81
+
+target=http://localhost:8090/wavsep/active/RFI/RFI-FalsePositives-GET/content.ini

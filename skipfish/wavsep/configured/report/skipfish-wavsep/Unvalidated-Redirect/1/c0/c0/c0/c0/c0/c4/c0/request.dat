@@ -1,0 +1,9 @@
+GET /wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/Case05-Redirect-RedirectMethod-FilenameContext-Unrestricted-HttpURL-DefaultPartialInput-PartialPathReq-Read.jsp?target=localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/content.ini HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=A6AE138922718717042D1BBC3DD11126
+

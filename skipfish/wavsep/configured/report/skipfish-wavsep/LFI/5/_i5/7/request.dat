@@ -1,0 +1,12 @@
+POST /wavsep/active/LFI/LFI-Detection-Evaluation-GET-200Valid/Case21-LFI-FileClass-FilenameContext-Unrestricted-OSPath-DefaultFullInput-BackslashPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=AC63712CC4FAF734021EECC9265E5BCD
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 19
+
+target=\content.ini

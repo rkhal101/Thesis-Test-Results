@@ -1,0 +1,9 @@
+GET /wavsep/active/RFI/RFI-Detection-Evaluation-GET-302Redirect/Case06-RFI-UrlClass-FilenameContext-Unrestricted-HttpURL-DefaultInvalidInput-NoProtocolReq-Read.jsp?target=localhost:8090/wavsep/active/RFI/RFI-Detection-Evaluation-GET-302Redirect/none892j3kd.txt HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=C97B2A1D1321DCFF998A4F0A109A9948
+

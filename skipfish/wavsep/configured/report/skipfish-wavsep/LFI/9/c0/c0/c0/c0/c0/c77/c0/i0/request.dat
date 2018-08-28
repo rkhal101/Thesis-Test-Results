@@ -1,0 +1,12 @@
+POST /wavsep/active/LFI/LFI-Detection-Evaluation-POST-200Error/Case64-LFI-ContextStream-FilenameContext-WindowsTraversalRemoval-OSPath-DefaultFullInput-NoPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=9B4FC8A2733D66B3DE00E8283EF83586
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 32
+
+target=/../../../WEB-INF/web.xml

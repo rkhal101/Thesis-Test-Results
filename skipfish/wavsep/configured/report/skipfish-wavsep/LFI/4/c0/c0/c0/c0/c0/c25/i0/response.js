@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 400 Bad Request\x0aServer: Apache-Coyote/1.1\x0aContent-Length: 0\x0aDate: Tue, 07 Aug 2018 20:37:15 GMT\x0aConnection: close\x0a'}

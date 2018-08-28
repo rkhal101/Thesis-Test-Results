@@ -1,0 +1,9 @@
+GET /wavsep/active/RFI/RFI-Detection-Evaluation-GET-404Error/Case07-RFI-UrlClass-FilenameContext-Unrestricted-HttpURL-DefaultEmptyInput-NoProtocolReq-Read.jsp?target=file:///etc/hosts HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=ED1D8C3434ECF0094B846F6E9D71C9AB
+

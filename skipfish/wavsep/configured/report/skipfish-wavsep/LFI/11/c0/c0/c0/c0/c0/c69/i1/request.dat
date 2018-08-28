@@ -1,0 +1,9 @@
+GET /wavsep/active/LFI/LFI-Detection-Evaluation-POST-200Valid/Case67-LFI-ContextStream-FilenameContext-UnixTraversalRemoval-OSPath-DefaultFullInput-BackslashPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=62B7A49CE18D2A553CFDB7EE8D335444
+

@@ -1,0 +1,12 @@
+POST /wavsep/active/RFI/RFI-Detection-Evaluation-GET-500Error/Case09-RFI-UrlClass-FilenameContext-HttpInputRemoval-HttpURL-DefaultRelativeInput-AnyPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=7F568C24CBDE12FE12D955CE9D0046B0
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 18
+
+target=content.ini

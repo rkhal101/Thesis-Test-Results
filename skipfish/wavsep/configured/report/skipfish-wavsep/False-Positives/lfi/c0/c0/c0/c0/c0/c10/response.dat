@@ -1,0 +1,393 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 20:10:17 GMT
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Evaluation of Directory Traversal / Local File Inclusion Detection Accuracy - HTTP GET Method</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<B>File delimiter: </B>/<BR>
+<B>Line delimiter (encoded): </B>&#38;&#35;10&#59;<BR>
+<B>User Directory Path (Absolute): </B>/<BR>
+<B>Deployment Path Root (Absolute): </B>/root/apache-tomcat-8.0.27/webapps/wavsep/<BR>
+<B>Deployment Path Current File (Absolute): </B>/root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-FalsePositives-GET/index.jsp<BR>
+<B>Deployment Path Current Directory (Absolute): </B>/root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-FalsePositives-GET/index.jsp<BR>
+<B>Web Path Root (Relative): </B>/wavsep<BR>
+<B>Web Path of File (Relative-no-root): </B>/active/LFI/LFI-FalsePositives-GET/index.jsp<BR>
+<B>Web Path of Dir (Relative-no-root): </B>/active/LFI/LFI-FalsePositives-GET/index.jsp<BR>
+<B>request URL: </B>http://localhost:8090/wavsep/active/LFI/LFI-FalsePositives-GET/index.jsp<BR>
+<B>Current directory's canonical path: </B>/<BR>
+<B>Current directory's absolute  path: </B>/.<BR>
+<BR><BR>
+
+
+<center><font size="5">False Positive Directory Traversal/LFI Test Cases:</font></center><br><br>
+
+<B><a href="Case01-LFI-FalsePositive-Forward-TextHtmlValidResponse-FilenameContext-Unrestricted-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp?target=/active/LFI/LFI-FalsePositives-GET/validfile1.jsp">
+  Case01-LFI-FalsePositive-Forward-TextHtmlValidResponse-FilenameContext-Unrestricted-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp</a></B><br>
+  False Positive LFI using the Forward Servlet feature: injection into a filename context, using an unrestricted OS path, default relative path input, with no path requirements, and in the scope of a page with erroneous responses.<br>
+  The user-controlled forward can still be used for file enumeration attacks (but not for actual LFI/Traversal attacks), and might also generate 404 and 500 responses.<br>
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Erroneous Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Servlet<br>Forward</TD><TD>None</TD><TD>Relative Path Input</TD>
+  <TD>Local OS Path (URL)</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Folder<BR><B>Full Path:</B> Not Supported</TD><TD>No Prefix<BR>(Relative path/ None)</TD>
+  <TD>Text/Html</TD><TD>200 Error</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  /./[original-file-name] (success)<br><b> vs. </b>
+  /../[original-file-name] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: /[full-path]/[target-file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Misleading False Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>False Positive Sample 1:</B> /active/LFI/LFI-FalsePositives-GET/include.jsp <br>
+  <B>False Positive Sample 2:</B> /WEB-INF/web.xml
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case02-LFI-FalsePositive-OpenRedirect-TextHtmlValidResponse-FilenameContext-Unrestricted-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp?target=/wavsep/active/LFI/LFI-FalsePositives-GET/validfile1.jsp">
+  Case02-LFI-FalsePositive-OpenRedirect-TextHtmlValidResponse-FilenameContext-Unrestricted-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp</a></B><br>
+  False Positive LFI using the Redirect Servlet feature: injection into a filename context, using an unrestricted OS path, default relative path input, with no path requirements, and in the scope of a page with erroneous responses.<br>
+  The user-controlled redirect can still be used for External/Open Redirect attacks (but not for actual LFI/Traversal attacks), and might also generate 404 and 500 responses.<br>
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Erroneous Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Servlet<br>Redirect</TD><TD>None</TD><TD>Relative Path Input</TD>
+  <TD>Full/Partial<br>HTTP URL</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Web Server Root<BR><B>Full Path:</B> Supported</TD><TD>No Prefix<BR>(Full Path/Relative Path/ None)</TD>
+  <TD>Text/Html</TD><TD>200 Error</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Detection Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  /./[original-file-name] (success)<br><b> vs. </b>
+  /../[original-file-name] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: /[full-path]/[target-file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Misleading False Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>False Positive Sample 1:</B> /wavsep/active/LFI/LFI-FalsePositives-GET/include.jsp <br>
+  <B>False Positive Sample 2:</B> /wavsep/active/WEB-INF/web.xml<br>
+  <B>False Positive Sample 3:</B> http://172.17.0.2:8080/wavsep/active/LFI/LFI-FalsePositives-GET/validfile1.jsp
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case03-LFI-FalsePositive-FileClass-TextHtmlValidResponse-FilenameContext-WhiteList-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp?target=validfile1.jsp">
+  Case03-LFI-FalsePositive-FileClass-TextHtmlValidResponse-FilenameContext-WhiteList-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp</a></B><br>
+  False Positive LFI using the File Class, but with an extremely limited white list: injection into a filename context, using an OS path (white list of files), default relative path input, with no path requirements, and in the scope of a page with erroneous responses.<br>
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Erroneous Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>File Class</TD><TD>White List</TD><TD>Relative Path Input</TD>
+  <TD>Local OS Path (URL)</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Folder<BR><B>Full Path:</B> Not Supported</TD><TD>No Prefix<BR>(Relative path/ None)</TD>
+  <TD>Text/Html</TD><TD>200 Error</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Detection Methods:</B></U>
+  </TD></TR>
+  <TR><TD>
+  [original-file-name] (success)<br><b> vs. </b>
+  [other-valid-file-name-in-whitelist] (success)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: [target-file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Misleading False Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>False Positive Sample 1:</B> validfile2.jsp <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case04-LFI-FalsePositive-FileClass-TextHtmlValidResponse-FilenameContext-TraversalRemovalAndWhiteList-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp?target=validfile1.jsp">
+  Case04-LFI-FalsePositive-FileClass-TextHtmlValidResponse-FilenameContext-TraversalRemovalAndWhiteList-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp</a></B><br>
+  False Positive LFI using the File Class, but with an extremely limited white list & traversal removal: injection into a filename context, using an OS path (traversal removal and then white list of files), default relative path input, with no path requirements, and in the scope of a page with erroneous responses.<br>
+  Might confuse scanners that compare input with local directory traversal characters (./,/./) to the original input, without performing additional verifications. 
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Erroneous Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>File Class</TD><TD>Traversal Removal<br>And White List</TD><TD>Relative Path Input</TD>
+  <TD>Local OS Path (URL)</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Folder<BR><B>Full Path:</B> Not Supported</TD><TD>No Prefix<BR>(Relative path/ None)</TD>
+  <TD>Text/Html</TD><TD>200 Error</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Detection Methods:</B></U>
+  </TD></TR>
+  <TR><TD>
+  /./[original-file-name] (success)<br><b> vs. </b>
+  [original-file-name] (success)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: [target-file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Misleading False Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>False Positive Sample 1:</B> validfile2.jsp <br>
+  <B>False Positive Sample 2:</B> ./validfile1.jsp <br>
+  <B>False Positive Sample 3:</B> /./validfile1.jsp <br>
+  <B>False Positive Sample 4:</B> ../validfile1.jsp <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case05-LFI-FalsePositive-ContextStream-TextHtmlValidResponse-FilenameContext-WhiteList-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp?target=/active/LFI/LFI-FalsePositives-GET/validfile1.jsp">
+  Case05-LFI-FalsePositive-ContextStream-TextHtmlValidResponse-FilenameContext-WhiteList-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp</a></B><br>
+  False Positive LFI using the Servlet Context Stream method, but with an extremely limited white list: injection into a filename context, using an OS path (white list of files), default relative path input, with no path requirements, and in the scope of a page with erroneous responses.<br>
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Erroneous Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Servlet Context Stream</TD><TD>White List</TD><TD>Context Path Input</TD>
+  <TD>Local OS Path (URL)</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path/Relative Path/ None)</TD>
+  <TD>Text/Html</TD><TD>200 Error</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Detection Methods:</B></U>
+  </TD></TR>
+  <TR><TD>
+  [original-file-name] (success)<br><b> vs. </b>
+  [other-valid-file-name-in-whitelist] (success)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: /[full-path]/[target-file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Misleading False Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>False Positive Sample 1:</B> /active/LFI/LFI-FalsePositives-GET/validfile2.jsp <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case06-LFI-FalsePositive-ContextStream-TextHtmlValidResponse-FilenameContext-TraversalRemovalAndWhiteList-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp?target=/active/LFI/LFI-FalsePositives-GET/validfile1.jsp">
+  Case06-LFI-FalsePositive-ContextStream-TextHtmlValidResponse-FilenameContext-TraversalRemovalAndWhiteList-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp</a></B><br>
+  False Positive LFI using the Servlet Context Stream method, but with an extremely limited white list & traversal removal: injection into a filename context, using an OS path (traversal removal and then white list of files), default relative path input, with no path requirements, and in the scope of a page with erroneous responses.<br>
+  Might confuse scanners that compare input with local directory traversal characters (./,/./) to the original input, without performing additional verifications. 
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Erroneous Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>Servlet Context Stream</TD><TD>Traversal Removal<br>And White List</TD><TD>Context Path Input</TD>
+  <TD>Local OS Path (URL)</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Application Root Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path/Relative Path/ None)</TD>
+  <TD>Text/Html</TD><TD>200 Error</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Detection Methods:</B></U>
+  </TD></TR>
+  <TR><TD>
+  /./[original-file-name] (success)<br><b> vs. </b>
+  [original-file-name] (success)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: /[full-path]/[target-file]<br>
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Misleading False Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>False Positive Sample 1:</B> /active/LFI/LFI-FalsePositives-GET/validfile2.jsp <br>
+  <B>False Positive Sample 2:</B> /active/LFI/LFI-FalsePositives-GET/./validfile1.jsp <br>
+  <B>False Positive Sample 3:</B> /active/LFI/LFI-FalsePositives-GET//./validfile1.jsp <br>
+  <B>False Positive Sample 4:</B> /active/LFI/LFI-FalsePositives-GET/../validfile1.jsp <br>
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case07-LFI-FalsePositive-FileClass-TextHtmlValidResponse-FilenameContext-EnumerationResponseOnly-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp?target=/root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-FalsePositives-GET/content.ini">
+  Case07-LFI-FalsePositive-FileClass-TextHtmlValidResponse-FilenameContext-EnumerationResponseOnly-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp</a></B><br>
+  False Positive LFI using the File Class, but without actually presenting the file content: injection into a filename context, using an unrestricted OS path, default full path input, with no path requirements, and in the scope of a page with erroneous responses.<br>
+  The user-controlled traversal input can still be used for file enumeration attacks (but not for actual LFI/Traversal attacks), and might also generate 404 and 500 responses.<br>
+  Might confuse scanners that focus on the path but never compare the content in the various results (or the effect on the server, in the case of Code File Inclusion).<br>
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Erroneous Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>File Class</TD><TD>File Enumeration Only</TD><TD>Full Path Input</TD>
+  <TD>Local OS Path (URL)</TD><TD><B>Injection Into:</B> Full Filename<br><B>Relative Path:</B> Execution Folder<BR><B>Full Path:</B> Supported</TD><TD>Any Prefix<BR>(Full Path/Relative Path/ None)</TD>
+  <TD>Text/Html</TD><TD>200 Error</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Detection Methods:</B></U>
+  </TD></TR>
+  <TR><TD>
+  ./[original-file-name] (success)<br><b> vs. </b>
+  ../[original-file-name] (failure)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: [full-path]/[target-file]<br>
+  Windows: c:\boot.ini<br>
+  Unix/Linux: /etc/passwd
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Misleading False Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>False Positive Sample 1:</B> /root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-FalsePositives-GET/include.jsp <br>
+  <B>False Positive Sample 2:</B> /root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-FalsePositives-GET/..\..\WEB-INF\web.xml
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+  
+  <B><a href="Case08-LFI-FalsePositive-FileClass-TextHtmlValidResponse-FilenameContext-InputNotUsed-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp?target=/root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-FalsePositives-GET/content.ini">
+  Case08-LFI-FalsePositive-FileClass-TextHtmlValidResponse-FilenameContext-InputNotUsed-OSPath-DefaultRelativeInput-NoPathReq-Read.jsp</a></B><br>
+  False Positive LFI using the File Class, but without any actual affect of the user input (server controlled default value): no injection, using an unrestricted OS path, default full path input, without path requirements, and in the scope of a page with erroneous responses.<br>
+  The test case still discloses sensitive information (default input/exceptions).<br>
+  Might confuse scanners that focus on analyzing the original input,  but don't perform sufficient validations to verify the input has any effect (valid vs. invalid).<br>
+  <TABLE border=1 cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'>
+  <TD><U><B>File Access Method:</B></U></TD><TD><U><B>Barriers:</B></U><br></TD>
+  <TD><U><B>Default Input:</B></U></TD><TD><U><B>Path Type:</B></U></TD>
+  <TD><U><B>File Injection Context:</B></U></TD><TD><U><B>Prefix Requirement:</B></U></TD>
+  <TD><U><B>Valid Response Stream:</B></U></TD><TD><U><B>Erroneous Response Type:</B></U></TD>
+  </TR>
+  <TR>
+  <TD>File Class</TD><TD>Ignore Input</TD><TD>Full Path Input</TD>
+  <TD>Local OS Path (URL)</TD><TD><B>Injection Into:</B> None<br><B>Relative Path:</B> Execution Folder<BR><B>Full Path:</B> Irrelevant</TD><TD>Any Prefix<BR>(Full Path/Relative Path/ None)</TD>
+  <TD>Text/Html</TD><TD>200 Error</TD>
+  </TR>
+  </TABLE>
+  <TABLE cellspacing=0 cellpadding=2>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Detection Methods:</B></U>
+  </TD></TR>
+  <TR><TD>
+  ./[original-file-name] (success)<br><b> vs. </b>
+  [original-file-name] (success)
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Sample False Exploit Structures:</B></U>
+  </TD></TR>
+  <TR><TD>
+  Web: [full-path]/[target-file]<br>
+  Windows: c:\boot.ini<br>
+  Unix/Linux: /etc/passwd
+  </TD></TR>
+  <TR bgcolor='#1AC6FF'><TD>
+  <U><B>Examples of Misleading False Exploits:</B></U>
+  </TD></TR>
+  <TR><TD>
+  <B>False Positive Sample 1:</B> /root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-FalsePositives-GET/include.jsp <br>
+  <B>False Positive Sample 2:</B> /root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-FalsePositives-GET/..\..\WEB-INF\web.xml
+  </TD></TR>
+  </TABLE>  
+  <br>
+  
+
+</body>
+</html>

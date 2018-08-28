@@ -1,0 +1,18 @@
+HTTP/1.1 200 Partial Content
+Server: Apache-Coyote/1.1
+Accept-Ranges: bytes
+ETag: W/"83-1280180290000"
+Last-Modified: Mon, 26 Jul 2010 21:38:10 GMT
+Content-Range: bytes 0-82/83
+Content-Type: text/html
+Content-Length: 83
+Date: Tue, 07 Aug 2018 18:44:12 GMT
+
+<html>
+<head>
+<title>Dummy Page</title>
+</head>
+<body>
+Dummy
+</body>
+</html>

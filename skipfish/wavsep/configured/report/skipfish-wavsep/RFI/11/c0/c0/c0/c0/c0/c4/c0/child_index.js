@@ -1,0 +1,3 @@
+var child = [
+  { 'dupe': true, 'type': 128, 'name': 'localhost:8080/wavsep/active/RFI/RFI-Detection-Evaluation-POST-200Valid/content.ini', 'dir': 'c0', 'linked': 0, 'url': 'http://localhost:8090/wavsep/active/RFI/RFI-Detection-Evaluation-POST-200Valid/Case05-RFI-UrlClass-FilenameContext-Unrestricted-HttpURL-DefaultFullInput-NoProtocolReq-Read.jsp DATA:target=localhost:8080/wavsep/active/RFI/RFI-Detection-Evaluation-POST-200Valid/content.ini', 'fetched': true, 'code': 200, 'len': 4340, 'decl_mime': 'application/octet-stream', 'sniff_mime': 'text/plain', 'cset': 'ISO-8859-1', 'missing': false, 'csens': false, 'child_cnt': 0, 'issue_cnt': [ 0, 0, 0, 0, 0 ], 'sig': 0x6bdbfc85 }
+];

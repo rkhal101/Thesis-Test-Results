@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 200 OK\x0aServer: Apache-Coyote/1.1\x0aContent-Type: text/html;charset=ISO-8859-1\x0aTransfer-Encoding: chunked\x0aDate: Tue, 07 Aug 2018 20:50:58 GMT\x0a\x0a\x3cxml\x3e\x3cfileContent\x3e\x3cuser\x3eKuekuatsu\x3c/user\x3e\x3crole\x3emanager\x3c/role\x3e\x3c/fileContent\x3e\x3c/xml\x3e'}

@@ -1,0 +1,75 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 19:06:59 GMT
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 10 - Injection into an order by clause (numeric) in a search page with erroneous responses</title>
+</head>
+<body>
+
+The list of messages:
+<TABLE>
+<TR>
+<TD>
+<B>
+MsgId
+</B>
+</TD>
+<TD>
+<B>
+Title
+</B>
+</TD>
+<TD>
+<B>
+Message
+</B>
+</TD>
+</TR>
+<TR>
+<TD>
+1
+</TD>
+<TD>
+Welcome to the web site
+</TD>
+<TD>
+Hello World
+</TD>
+</TR>
+<TR>
+<TD>
+2
+</TD>
+<TD>
+Remember to change your password
+</TD>
+<TD>
+Hello World
+</TD>
+</TR>
+<TR>
+<TD>
+3
+</TD>
+<TD>
+Your account is about to expire
+</TD>
+<TD>
+Hello World
+</TD>
+</TR>
+</TABLE>
+
+
+</body>
+</html>

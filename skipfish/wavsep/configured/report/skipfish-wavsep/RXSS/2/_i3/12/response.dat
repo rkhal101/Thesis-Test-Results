@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 18:43:42 GMT
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 24 - RXSS via Javascript injection into the scope of a script tag (Javascript, No String Delimiter)</title>
+</head>
+<body>
+
+<script language='javascript'>
+var orderId = .htaccess.aspx--&gt;&quot;&gt;&#39;&gt;&#39;&quot;&lt;sfi000055v011919&gt;;
+ alert('Order Number ' + orderId + ' Was Approved');

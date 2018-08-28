@@ -1,0 +1,12 @@
+POST /wavsep/active/LFI/LFI-Detection-Evaluation-GET-404Error/Case05-LFI-FileClass-FilenameContext-Unrestricted-OSPath-DefaultInvalidInput-AnyPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=71E2CC22958859C2B7E8628723BE2534
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 113
+
+target=/root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-Detection-Evaluation-GET-404Error/none892j3kd.txt

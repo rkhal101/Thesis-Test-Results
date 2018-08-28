@@ -1,0 +1,6 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Server-Info: abcd
+Set-Cookie: parameter=abcd; Expires=Thu, 01-Jan-1970 00:00:10 GMT
+
+[...truncated...]

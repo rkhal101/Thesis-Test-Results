@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Set-Cookie: info-cookie-no-http-only=test
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 770
+Date: Tue, 07 Aug 2018 22:21:44 GMT
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--
+	Inspired by a vulnerable test case originally written for the OWASP Zed Attack Proxy (ZAP) project
+	(http://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project) 
+	Original Author: psiinon (psiinon@gmail.com).
+-->
+
+<head>
+<title>Info Cookie no HTTPOnly flag (Originally part of ZAP-WAVE)</title>
+</head>
+<body>
+<H2>Setting a cookie without the HTTPOnly flag (Originally part of ZAP-WAVE)</H2>
+<H3>Description</H3>
+The 'info-cookie-no-http-only' cookie is set without the HTTPOnly flag being set.<br>
+This means that the cookie can be accessed by client side scripts, which is usually a bad idea.<br>
+Note that some servers may add this flag anyway, depending on their configuration! 
+<H3>Example</H3>
+
+
+</body>
+

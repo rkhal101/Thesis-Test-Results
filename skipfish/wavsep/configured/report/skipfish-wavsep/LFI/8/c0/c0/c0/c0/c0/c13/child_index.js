@@ -1,0 +1,3 @@
+var child = [
+  { 'dupe': false, 'type': 64, 'name': 'target=/root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-Detection-Evaluation-POST-404Error/none892j3kd.txt', 'dir': 'c0', 'linked': 5, 'url': 'http://localhost:8090/wavsep/active/LFI/LFI-Detection-Evaluation-POST-404Error/Case11-LFI-FileClass-FilenameContext-Unrestricted-OSPath-DefaultInvalidInput-NoPathReq-Read.jsp DATA:target=/root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-Detection-Evaluation-POST-404Error/none892j3kd.txt', 'fetched': true, 'code': 404, 'len': 1020, 'decl_mime': 'text/html', 'sniff_mime': 'application/xhtml+xml', 'cset': 'ISO-8859-1', 'missing': true, 'csens': false, 'child_cnt': 2, 'issue_cnt': [ 4, 0, 5, 1, 3 ], 'sig': 0xfabf5d75 }
+];

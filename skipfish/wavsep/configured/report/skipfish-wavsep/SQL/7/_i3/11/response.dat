@@ -1,0 +1,27 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 666
+Date: Tue, 07 Aug 2018 19:16:41 GMT
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 13 - Injection into date values in a calculation page with different valid responses</title>
+</head>
+<body>
+
+
+	Count Transactions in a Given Date:<br><br>
+	<form name="frmInput" id="frmInput" action="Case13-InjectionInCalc-Date-BooleanExploit-WithDifferent200Responses.jsp" method="POST">
+		<input type="text" name="transactionDate" id="transactionDate" value="2010-01-01"><br>
+		<input type=submit value="submit">
+	</form>
+
+
+</body>
+</html>°

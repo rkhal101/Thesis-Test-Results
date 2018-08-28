@@ -1,0 +1,10 @@
+GET /wavsep/active/Reflected-XSS/RXSS-Detection-Evaluation-POST/text%2Fhtml%3Bcharset%3DISO-8859-1/ HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Accept: skip/fish;
+Cookie: JSESSIONID=7BC2EF8EE2AAC2E47C061C49DEAB6F6F
+

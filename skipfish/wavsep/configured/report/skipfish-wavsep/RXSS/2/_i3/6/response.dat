@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 18:44:35 GMT
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 7 - RXSS via DHTML event injection into the scope of an HTML property (Double Quote Delimiter)</title>
+</head>
+<body>
+
+User Controlled Image: <img src=".htaccess.aspx--&gt;"&gt;&#39;&gt;&#39;"&lt;sfi000385v011919&gt;">
+
+
+</body>
+</html>et>
+</html>

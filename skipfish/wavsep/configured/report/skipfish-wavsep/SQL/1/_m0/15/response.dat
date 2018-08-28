@@ -1,0 +1,159 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 19:06:28 GMT
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 15 - Injection into date values (without quotes) in an update page with erroneous responses</title>
+</head>
+<body>
+
+The list of messages:
+<TABLE>
+<TR>
+<TD>
+<B>
+transactionId
+</B>
+</TD>
+<TD>
+<B>
+sum
+</B>
+</TD>
+<TD>
+<B>
+description
+</B>
+</TD>
+<TD>
+<B>
+transactionDate
+</B>
+</TD>
+</TR>
+<TR>
+<TD>
+132
+</TD>
+<TD>
+1000
+</TD>
+<TD>
+Simple Transaction
+</TD>
+<TD>
+2010-01-01
+</TD>
+</TR>
+<TR>
+<TD>
+133
+</TD>
+<TD>
+1200
+</TD>
+<TD>
+Simple Transaction
+</TD>
+<TD>
+2010-01-01
+</TD>
+</TR>
+<TR>
+<TD>
+135
+</TD>
+<TD>
+3000
+</TD>
+<TD>
+Simple Transaction
+</TD>
+<TD>
+2010-01-01
+</TD>
+</TR>
+<TR>
+<TD>
+223
+</TD>
+<TD>
+4000
+</TD>
+<TD>
+Simple Transaction
+</TD>
+<TD>
+2010-01-01
+</TD>
+</TR>
+<TR>
+<TD>
+423
+</TD>
+<TD>
+5000
+</TD>
+<TD>
+Simple Transaction
+</TD>
+<TD>
+2010-01-01
+</TD>
+</TR>
+<TR>
+<TD>
+456
+</TD>
+<TD>
+6000
+</TD>
+<TD>
+Simple Transaction
+</TD>
+<TD>
+2010-01-01
+</TD>
+</TR>
+<TR>
+<TD>
+789
+</TD>
+<TD>
+7012
+</TD>
+<TD>
+Expensive Transaction
+</TD>
+<TD>
+2010-01-01
+</TD>
+</TR>
+<TR>
+<TD>
+895
+</TD>
+<TD>
+8000
+</TD>
+<TD>
+Hello World
+</TD>
+<TD>
+2010-02-02
+</TD>
+</TR>
+</TABLE>
+
+
+</body>
+</html>

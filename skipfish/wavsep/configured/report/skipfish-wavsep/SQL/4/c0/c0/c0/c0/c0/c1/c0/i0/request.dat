@@ -1,0 +1,10 @@
+GET /wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-200Identical/Case02-InjectionInView-String-Blind-200ValidResponseWithDefaultOnException.jsp?username=user1'" HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+Range: bytes=0-399999
+User-Agent: sfish'"
+Referer: sfish'"
+Accept-Language: sfish'",en
+Cookie: JSESSIONID=0E5B607F6A13B8F472445BD1663C4EF0
+

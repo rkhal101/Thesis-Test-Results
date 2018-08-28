@@ -1,0 +1,9 @@
+GET /wavsep/active/SQL-Injection/SInjection-FalsePositives-GET/Case02-FalsePositiveInjectionInLogin-PsAndIv-500SyntaxErrorOnIvFailure.jsp?username=SQL-Injection&password=textvalue2 HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=609A3E3EEE2A3C1C7A32A509426EFC72
+

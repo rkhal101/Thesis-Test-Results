@@ -1,0 +1,12 @@
+POST /wavsep/active/LFI/LFI-Detection-Evaluation-POST-302Redirect/Case53-LFI-FileClass-FilenameContext-SlashTraversalRemoval-OSPath-DefaultFullInput-AnyPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=0C919630329E544A017E7953D351F10F
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 113
+
+target=/root/apache-tomcat-8.0.27/webapps/wavsep/active/LFI/LFI-Detection-Evaluation-POST-302Redirect/content.ini

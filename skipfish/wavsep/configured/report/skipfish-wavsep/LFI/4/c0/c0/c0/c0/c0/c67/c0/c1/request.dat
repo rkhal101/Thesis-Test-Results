@@ -1,0 +1,9 @@
+GET /wavsep/active/LFI/LFI-Detection-Evaluation-GET-302Redirect/Case40-LFI-FileClass-FilenameContext-WindowsTraversalValidation-OSPath-DefaultFullInput-NoPathReq-Read.jsp?target=MissingResource.html HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=4023D27D01B3D7D42BCD87E33C94491A
+

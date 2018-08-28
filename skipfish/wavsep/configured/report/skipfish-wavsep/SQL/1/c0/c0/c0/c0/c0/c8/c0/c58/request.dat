@@ -1,0 +1,9 @@
+GET /wavsep/active/SQL-Injection/SInjection-Detection-Evaluation-GET-500Error/Case07-InjectionInSearch-Numeric-UnionExploit-WithErrors.jsp?msgId=58 HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=82308216D72575A69076A44C8C8890AE
+

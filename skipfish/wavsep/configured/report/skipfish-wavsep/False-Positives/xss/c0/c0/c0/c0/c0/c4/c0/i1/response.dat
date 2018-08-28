@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Server-Info: skipfish://invalid/;?
+Set-Cookie: parameter="skipfish://invalid/;?"; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT
+Content-Type: text/html;charset=ISO-8859-1
+Transfer-Encoding: chunked
+Date: Tue, 07 Aug 2018 20:06:47 GMT
+
+
+
+Empty Page
+
+

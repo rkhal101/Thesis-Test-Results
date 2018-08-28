@@ -1,0 +1,3 @@
+var child = [
+  { 'dupe': false, 'type': 64, 'name': 'target=/active/LFI/LFI-Detection-Evaluation-POST-404Error/content.ini', 'dir': 'c0', 'linked': 5, 'url': 'http://localhost:8090/wavsep/active/LFI/LFI-Detection-Evaluation-POST-404Error/Case25-LFI-ContextStream-FilenameContext-Unrestricted-OSPath-DefaultFullInput-AnyPathReq-Read.jsp DATA:target=/active/LFI/LFI-Detection-Evaluation-POST-404Error/content.ini', 'fetched': true, 'code': 200, 'len': 4340, 'decl_mime': 'application/octet-stream', 'sniff_mime': 'text/plain', 'cset': 'ISO-8859-1', 'missing': false, 'csens': false, 'child_cnt': 1, 'issue_cnt': [ 2, 0, 2, 1, 0 ], 'sig': 0x62a38ce5 }
+];

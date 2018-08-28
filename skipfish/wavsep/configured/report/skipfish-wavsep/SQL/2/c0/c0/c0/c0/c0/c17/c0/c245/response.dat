@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 616
+Date: Tue, 07 Aug 2018 19:09:21 GMT
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Case 16 - Injection into a numeric value in a private resource view page with erroneous responses and quote validation</title>
+</head>
+<body>
+
+Exception details: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'in AND userId=1' at line 1
+
+
+</body>
+</html>

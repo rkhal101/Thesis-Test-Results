@@ -1,0 +1,12 @@
+POST /wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/Case14-Redirect-RedirectMethod-FilenameContext-HttpInputRemoval-HttpURL-DefaultInvalidInput-AnyPathReq-Read.jsp HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=A6AE138922718717042D1BBC3DD11126
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 125
+
+target=http://localhost:8090/wavsep/active/Unvalidated-Redirect/Redirect-Detection-Evaluation-GET-302Redirect/none892j3kd.txt

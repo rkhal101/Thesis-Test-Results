@@ -1,0 +1,9 @@
+GET /wavsep/active/Unvalidated-Redirect/Redirect-FalsePositives-GET/DefaultFullInput HTTP/1.1
+Host: localhost:8090
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://localhost/
+Cookie: JSESSIONID=0D658361902B35365B199C784030A61C
+

@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 557
+Date: Tue, 07 Aug 2018 19:03:17 GMT
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>JavaScript Injection in DOM XSS Sink document.location</title>
+</head>
+<body>
+
+
+	Enter your input:<br><br>
+	<form name="frmInput" id="frmInput" action="Case37-InjectionDirectlyInToDomXssSinkLocation.jsp" method="GET"
