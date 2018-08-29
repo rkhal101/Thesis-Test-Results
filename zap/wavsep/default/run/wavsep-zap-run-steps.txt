@@ -1,0 +1,3 @@
+Refer to: thesis report. 
+
+Spider + Ajax Spider time = 57:03:64
