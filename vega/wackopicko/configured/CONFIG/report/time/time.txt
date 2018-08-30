@@ -1,0 +1,3 @@
+Approximate time to visit the pages in the application: 5 minutes
+The Scan took: 8:17:28 minutes.
+Total: 13:17 minutes.
