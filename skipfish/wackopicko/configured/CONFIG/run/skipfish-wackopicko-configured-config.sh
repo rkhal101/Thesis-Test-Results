@@ -1,0 +1,1 @@
+skipfish -o /root/Desktop/skipfish-wackopicko-configured-config -S complete.wl -I http://192.168.0.26/WackoPicko/ -A bryce:bryce -X http://192.168.0.26/WackoPicko/users/logout.php http://192.168.0.26/WackoPicko/
