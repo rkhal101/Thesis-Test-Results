@@ -1,0 +1,3 @@
+Total time for Spider and Ajax Spider: 5:48 minutes.
+Total time for scan: 5:54:815 minutes.
+Total time: 11:42

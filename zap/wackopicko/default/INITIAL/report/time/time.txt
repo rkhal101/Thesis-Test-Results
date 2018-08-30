@@ -1,0 +1,3 @@
+The Spider and Ajax Spider took: 1.5 minutes.
+The Active Scan took: 2:49:717 minutes.
+Total: 4:19 minutes.

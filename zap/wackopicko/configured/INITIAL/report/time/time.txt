@@ -1,0 +1,4 @@
+Approximate time to visit the pages in the application: 2 minutes
+The Spider and Ajax Spider took: 1:38 minutes.
+The Active Scan took: 9:11:126 minutes.
+Total: 12:49 minutes.
